@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/danilarsen16/liri-node-app#readme",
   "dependencies": {
-    "dotenv": "file:node_modules/dotenv",
+    "dotenv": "^6.0.0",
+    "inquirer": "^6.0.0",
     "node-spotify-api": "^1.0.7",
-    "request": "file:node_modules/request",
+    "omdb": "^0.8.0",
+    "omdb-client": "^2.0.0",
+    "request": "^2.87.0",
     "twitter": "^1.7.1"
   }
 }
