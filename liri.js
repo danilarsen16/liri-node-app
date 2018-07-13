@@ -16,8 +16,6 @@ var omdbApi = require('omdb-client');
 var omdb = require('omdb');
 
 
-
-
 switch (command) {
     case "my-tweets":
         console.log("my tweets")
@@ -95,71 +93,71 @@ function doWhatItSays() {
     });
 }
 
-    //  omdb code //
-    function movieThis(movieName) {
+//  omdb code //
+function movieThis(movieName) {
 
-        console.log(keys.omdb);
+    console.log(keys.omdb);
 
-        request("http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + keys.omdb, function (error, response, body) {
+    request("http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + keys.omdb, function (error, response, body) {
 
-            // If there were no errors and the response code was 200 (i.e. the request was successful)...
-            if (!error && response.statusCode === 200) {
+        // If there were no errors and the response code was 200 (i.e. the request was successful)...
+        if (!error && response.statusCode === 200) {
 
-                console.log(body)
-                console.log(JSON.parse(body));
+            console.log(body)
+            console.log(JSON.parse(body));
 
-                //Get the Movie ID
-                var data = JSON.parse(body);
-                var title = data.Title
-                // console.log(movieID.imdbID);
+            //Get the Movie ID
+            var data = JSON.parse(body);
+            var title = data.Title
+            // console.log(movieID.imdbID);
 
-                // Create new query using the movie ID
-                // var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + omdbKey + "&append_to_response=credits,releases";
+            // Create new query using the movie ID
+            // var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + omdbKey + "&append_to_response=credits,releases";
 
-                // request(queryURL, function (error, response, body) {
-                // var movieObj = JSON.parse(body);
+            // request(queryURL, function (error, response, body) {
+            // var movieObj = JSON.parse(body);
 
-                console.log("************************************");
-                console.log("Title of the movie");
-                console.log(title);
-                console.log("____________________________________");
+            console.log("************************************");
+            console.log("Title of the movie");
+            console.log(title);
+            console.log("____________________________________");
 
-                console.log("Year the movie came out.");
-                console.log(data.Year);
-                console.log("____________________________________");
+            console.log("Year the movie came out.");
+            console.log(data.Year);
+            console.log("____________________________________");
 
-                console.log("IMDB Rating of the movie.");
-                console.log(data.imdbRating);
-                console.log("____________________________________");
+            console.log("IMDB Rating of the movie.");
+            console.log(data.imdbRating);
+            console.log("____________________________________");
 
-                console.log("Rotten Tomatoes Rating of the movie.");
-                console.log(data.Ratings[1]);
-                console.log("____________________________________");
+            console.log("Rotten Tomatoes Rating of the movie.");
+            console.log(data.Ratings[1]);
+            console.log("____________________________________");
 
-                console.log("Country where the movie was produced.");
-                console.log(data.Country);
-                console.log("____________________________________");
+            console.log("Country where the movie was produced.");
+            console.log(data.Country);
+            console.log("____________________________________");
 
-                console.log("Language of the movie.");
-                console.log(data.Language);
-                console.log("____________________________________");
+            console.log("Language of the movie.");
+            console.log(data.Language);
+            console.log("____________________________________");
 
-                console.log("Plot of the movie.");
-                console.log(data.Plot);
-                console.log("____________________________________");
+            console.log("Plot of the movie.");
+            console.log(data.Plot);
+            console.log("____________________________________");
 
-                console.log("Actors in the movie.");
-                console.log(data.Actors);
-                console.log("____________________________________");
+            console.log("Actors in the movie.");
+            console.log(data.Actors);
+            console.log("____________________________________");
 
-                // }
+            // }
 
-                // });
+            // });
 
 
-            } else {
-                console.log("Mr. Nobody");
-            }
+        } else {
+            console.log(data);
+        }
 
-        });
-    }
+    });
+}
