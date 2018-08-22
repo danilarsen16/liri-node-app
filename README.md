@@ -1,7 +1,4 @@
-# liri-node-app
-Week 10 (LIRI Bot) Assignment
-
-Used Node JS to create a LIRI bot. LIRI is a command line node app that takes in parameters and returns data based on one of four commands:
+Using Node JS, this application is the LIRI bot. LIRI is a command line node app that takes in parameters and returns data based on one of four commands:
 
   * `my-tweets`
 
